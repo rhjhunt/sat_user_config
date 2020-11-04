@@ -1,0 +1,11 @@
+---
+- name: Create the new role for the user
+  redhat.satellite.role:
+    name: "{{ role.name }}"
+    description: "{{ role.description }}"
+    locations: "{{ role.locations }}"
+    organizations: "{{ role.organizations }}"
+    server_url: "{{ satellite.server_url }}"
+    username: "{{ satellite.username }}"
+    password: "{{ satellite.password }}"
+    validate_certs: "{{ validate_certs }}"

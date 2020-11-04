@@ -1,0 +1,103 @@
+---
+# Authentication source where the user exists
+user.auth_source: "{{ omit }}"
+
+# The location that the user uses by default
+user.location: []
+
+# The organizxation that the user uses by default
+user.organization: []
+
+# Description of the user
+user.description: "{{ omit }}"
+
+# The language locale for the user
+user.locale: "{{ omit }}"
+
+# First name of the user
+user.firstname: []
+
+# Last name of the user
+user.lastname: []
+
+# List of locations the entity should be assigned to
+user.locations: "{{ omit }}"
+
+# List of organizations the entity should be assigned to
+user.organizations: []
+
+# Name of the user
+user.login: []
+
+# Email address of the user
+user.mail: []
+
+# Password for the user
+user.user_password: "{{ omit }}"
+
+# List of roles assigned to the user
+user.roles: "{{ omit }}"
+
+# Timezone for the user
+# If blank it will use the browser timezone.
+user.timezone: "{{ omit }}"
+
+# Description of the role
+role.description: "{{ omit }}"
+
+# Filters with permissions for the role
+role.filters: "{{ omit }}"
+
+# List of locations the entity should be assigned to
+role.locations: "{{ omit }}"
+
+# The name of the role
+role.name: []
+
+# Description of the host collection
+collection.description: []
+
+# Name of the host collection
+collection.name: []
+
+# Organization that the entity is in
+collection.organization: []
+
+# List of organizations the entity should be assigned to
+role.organizations: []
+
+# Set Auto-Attach on or off
+activation_key.auto_attach: "{{ omit }}"
+
+# Name of the content view
+activation_key.content_view: "{{ omit }}"
+
+# Description of the activation key
+activation_key.description: "{{ omit }}"
+
+# List of host collections to add to activation key
+activation_key.host_collections: "{{ omit }}"
+
+# Name of the lifecycle environment
+activation_key.lifecycle_environment: "{{ omit }}"
+
+# Name of the activation key
+activation_key.name: []
+
+# Organization that the entity is in
+activation_key.organization: []
+
+# List of subscriptions that include either Name or Pool ID.
+activation_key.subscriptions: "{{ omit }}"
+
+# URL of the Satellite server
+satellite.server_url: []
+
+# Username accessing the Satellite server
+satellite.username: []
+
+# Password of user accessing the Satellite server
+satellite.password: []
+
+# Whether or not to verify the TLS certificates of the Satellite Server
+validate_certs: False
