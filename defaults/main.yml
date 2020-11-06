@@ -1,4 +1,8 @@
 ---
+# Include role variables
+include_vars:
+  - viewer.yml
+
 # Authentication source where the user exists
 user.auth_source: "{{ omit }}"
 

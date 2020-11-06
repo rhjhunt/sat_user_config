@@ -1,11 +1,26 @@
 ---
+- name: Create the host collection for the user
+  redhat.satellite.host_collection:
+    name: "{{ collection.name }}"
+    description: "{{ collection.description }}"
+    organization: "{{ collection.organization }}"
+    server_url: "{{ satellite.server_url }}"
+    username: "{{ satellite.username }}"
+    password: "{{ satellite.password }}"
+    state: present
+    validate_certs: "{{ validate_certs }}"
+
 - name: Create the new role for the user
   redhat.satellite.role:
     name: "{{ role.name }}"
     description: "{{ role.description }}"
     locations: "{{ role.locations }}"
     organizations: "{{ role.organizations }}"
+    filters:
+      - permissions: "{{ satellite.role.viewer }}"
+        search: "host_collection = {{ collection.name }}"
     server_url: "{{ satellite.server_url }}"
     username: "{{ satellite.username }}"
     password: "{{ satellite.password }}"
+    state: present
     validate_certs: "{{ validate_certs }}"
